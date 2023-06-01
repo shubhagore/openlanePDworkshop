@@ -181,6 +181,12 @@ PDK folder in the path Desktop/work/tools/openlane_work_dir contains all the inf
 
 The PDK which we are using for this workshop is skywater_130nm PDK.
 
+![ubuntu_commands2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2b6cad42-549c-4d9c-9fb0-dba9466ccae3)
 
+Inside sky130A we can see 2 sub directories namely libs.ref and libs.tech as shown in the above figure.
+
+libs.ref contains all the technology specific information like timing, cell, lef
+
+libs.tech contain all the information related to tool. 
 
 
