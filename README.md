@@ -175,6 +175,12 @@ Few of the linux commands useful are,
 3. ls -lrt --------> This will list all the files and directories in the path in the chronological order 
 4. ls --help ------> This can be used to get more details on ls command
 
+![ubuntu_commands1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/c7155d53-07e1-4c31-94b2-48229dacbf7a)
+
+PDK folder in the path Desktop/work/tools/openlane_work_dir contains all the info related to PDK.
+
+The PDK which we are using for this workshop is skywater_130nm PDK.
+
 
 
 
