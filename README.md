@@ -105,6 +105,10 @@ SKY_L3 - Introduction to OpenLANE and strive chipsets:
 
 OpenLANE ASIC flow:
 
+![openlane1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/921304b8-c487-41e8-b2e5-e7cbf960a627)
+
+![strive](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/a05b76f6-0713-4fdc-a09c-56d037c5c208)
+
 Main goal is to produce clean GDSII without human help.
 
 Clean GDSII means, having no
