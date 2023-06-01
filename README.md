@@ -45,3 +45,19 @@ Synthesis: This stage converts RTL to the circuit out of components from the sta
 
 ![synthesis](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/3a69b3c9-b655-4609-bfcc-d5b8066d9db2)
 
+Each standard cell has regular layout.
+
+Dimensions of the cell differ from eah other.
+
+Each cell has different views or models,
+
+i. Electrical (delay), HDL, spice
+
+ii. Layout (Abstract and detailed).
+
+Floorplan: Size and shape of the die, Macro placement, I/O pins placement and power planning are done in Floorplan.
+
+In power planning, power is circulated using power grid which has alternate horizontal and vertical pattern of metal layers. Power grid is built using rings, stripes, and power is evenly distriuted. Higher metals layers are used for the routing of power as they are thicker (wider), thus reduces the resistivity. This helps for less IR drop and electromigration.
+
+
+
