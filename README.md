@@ -15,3 +15,7 @@ PDK: PDK is the collection of files used to model a fabrication process for the 
        ii) Device models,
        iii) Digital Standard cell Libraries,
        iv)  I/O libraries, etc.
+       
+
+Simplified RTL to GDSII flow:
+
