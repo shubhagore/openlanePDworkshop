@@ -139,11 +139,24 @@ Design exploration : When you have more no of configurations in our design, the 
 
 ![design_exploration](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/fc1100f3-5581-486d-b672-db3e341a598a)
 
-OpenLANE Regression Testing : The design exploration utility is used for regression testing. OpenLANE already does this so that we can run the experssions on serveal configurations and compare them with the best one. It is something like Iteration.
+OpenLANE Regression Testing : The design exploration utility is used for regression testing. OpenLANE already does this so that we can run the experssion
 
 ![openlane_regression_testing](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/88bb2eb5-8ba0-405d-865f-c4be47016551)
 
 DFT (DESIGN FOR TEST) : Its an additional testing that is done for correctness of the design by generating test vectors or stimulus.`
 
 ![dft](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/36974b27-3f05-4531-8bdf-82aefa9167fa)
+
+Physical Implentation : we use automated PnR
+
+Floor/power planning
+End decoupling capcitors and Tap cells insertion
+PLacement : global and detailed
+Post placement optimization
+Clock Tree Synthesis
+Routing : Global and Detailed
+
+LEC : Since, we do optomization in Physical Implementation, the output netlist from this might be different from the synthesis netlist. Inorder to avoid any further violations functionally, we need to logically check the design before and after PnR. This is known as Logic Equivalence check.
+
+
 
