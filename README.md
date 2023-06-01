@@ -71,6 +71,8 @@ According to the netlist, cells are placed in their resepctive locations and cel
 
 ![placement1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/f51d9dd9-8bf3-462b-a5b0-46da882e4008)
 
+Clock tree synthesis:
 
+Building a clock tree such that clock reached every clock pin of a sequential block with min skew and insertion delay.
 
 
