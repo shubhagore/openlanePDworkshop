@@ -187,6 +187,13 @@ Inside sky130A we can see 2 sub directories namely libs.ref and libs.tech as sho
 
 libs.ref contains all the technology specific information like timing, cell, lef
 
+![ubuntu_commands3](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/9c3c12ae-3755-4606-863e-0db56d616ae1)
+
 libs.tech contain all the information related to tool. 
+
+![ubuntu_commands4](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/246abd8e-9334-4eee-a18b-a12ae91ebd0a)
+
+We will be working on sky130_fd_sc_hd. (fd - foundary, sc - standard cell, hd - high density)
+
 
 
