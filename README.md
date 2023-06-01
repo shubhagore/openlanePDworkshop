@@ -9,6 +9,7 @@ Designing the digital application in an automated way requires several elemnets.
 Open source digital ASIC design:
 
 ![open_source_digital_asic_design](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/dbeedaef-770a-4510-93cc-6a56616fe18e)
+
 PDK: PDK is the collection of files used to model a fabrication process for the EDA tools. It is the interface between designers and fabrication team. PDK includes 
   Design rules such as DRC, LVS, PEX
   Device models 
