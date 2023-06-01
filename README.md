@@ -164,4 +164,17 @@ Using OpenLANE we took a preventive approach. we created a fake antenna diode an
 ![dealing_with_antenna_violations2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/ec1cc368-d883-4f52-a8e3-4666178524fb)
 
 
+SKY130_D1_SK3 - Get familiar to open-source EDA tools:
+
+SKY_L1 - OpenLANE directory structure in detail:
+
+Few of the linux commands useful are,
+
+1. cd -------------> change diectory - This is to change the path
+2. ls -------------> list - This is to list the files and directories present in the path in which we are there
+3. ls -lrt --------> This will list all the files and directories in the path in the chronological order 
+4. ls --help ------> This can be used to get more details on ls command
+
+
+
 
