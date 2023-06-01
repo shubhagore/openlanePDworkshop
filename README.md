@@ -2,6 +2,8 @@ Sky130 Day1 - Inception of open-source EDA, openLane and Sky130 PDK:
 
 SKY130_D1_SK2 - SoC design and OpenLANE:
 
+SKY_L1 - Introduction to all components of open-source digital asic design:
+
 Digital ASIC Design:
 
 Designing the digital application in an automated way requires several elemnets. The elements include hardware descriptive language, EDA tools and Process design kit (PDK) data
@@ -23,7 +25,7 @@ Digital Standard cell Libraries,
 I/O libraries, etc.
        
 
-Simplified RTL to GDSII flow:
+SKY_L2 - Simplified RTL to GDSII flow:
 
 ![simplified_RTLto_GDSII_flow](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2d52f407-778f-428f-a059-f61746930e06)
 
@@ -95,3 +97,21 @@ Once Routing is done, we do verifictaion during signoff
 Design rule checks (DRC) : verifies whether our design meets design rules. (performed by MAGIC) Layout vs schematic (LVS) : verifies whether our layout matches with the netlist schematic.(MAGIC AND NETGEN).
 
 2. Timing Verification : Static Timing Analysis : Checks whether our design meets all teh timing constraints and is running with the designated frequency.
+
+![signoff](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2859e628-91c4-4cd3-aeec-a58c451c5af1)
+
+
+SKY_L3 - Introduction to OpenLANE and strive chipsets:
+
+OpenLANE ASIC flow:
+
+Main goal is to produce clean GDSII without human help.
+
+Clean GDSII means, having no
+
+1. LVS violations
+
+2. DRC violations
+
+3. timing violations
+
