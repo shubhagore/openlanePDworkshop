@@ -145,6 +145,5 @@ OpenLANE Regression Testing : The design exploration utility is used for regress
 
 DFT (DESIGN FOR TEST) : Its an additional testing that is done for correctness of the design by generating test vectors or stimulus.`
 
+![dft](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/36974b27-3f05-4531-8bdf-82aefa9167fa)
 
-
-````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
