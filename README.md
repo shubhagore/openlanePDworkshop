@@ -55,9 +55,12 @@ i. Electrical (delay), HDL, spice
 
 ii. Layout (Abstract and detailed).
 
-Floorplan: Size and shape of the die, Macro placement, I/O pins placement and power planning are done in Floorplan.
+Floorplan: Size and shape of the die, Macro placement, I/O pins placement, rows definition and power planning are done in Floorplan.
 
 In power planning, power is circulated using power grid which has alternate horizontal and vertical pattern of metal layers. Power grid is built using rings, stripes, and power is evenly distriuted. Higher metals layers are used for the routing of power as they are thicker (wider), thus reduces the resistivity. This helps for less IR drop and electromigration.
+
+![floorplan](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/daaedeb0-7da9-4741-8531-ac05d8d6a74d)
+
 
 
 
