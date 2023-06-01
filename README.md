@@ -23,4 +23,10 @@ Simplified RTL to GDSII flow:
 
 ![simplified_RTLto_GDSII_flow](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2d52f407-778f-428f-a059-f61746930e06)
 
-
+The flow includes the following steps,
+Synthesis
+Floorplan/Power planning
+Placement
+Clock Tree Synthesis
+Routing
+Signoff
