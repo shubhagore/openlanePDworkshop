@@ -63,5 +63,10 @@ In power planning, power is circulated using power grid which has alternate hori
 
 ![power_planning](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/d24da1df-57d1-4b68-b3b4-6ba059beb12b)
 
+Placement: 
+
+According to the netlist, cells are placed in their resepctive locations and cells might overlap, so we do detailed placement to avoid the overlapping and flipped to save site row area (cells are legalized).
+
+
 
 
