@@ -30,13 +30,12 @@ Simplified RTL to GDSII flow:
 The flow includes the following steps,
 
 Synthesis
-
 Floorplan/Power planning
-
 Placement
-
 Clock Tree Synthesis
-
 Routing
-
 Signoff
+
+Synthesis: This stage converts RTL to the circuit out of components from the standard cell library (SCL). This is usually referred to as Gate level netlist. 
+
+
