@@ -119,3 +119,14 @@ Clean GDSII means, having no
 
 3. timing violations
 
+
+SKY_L4 - Introduction to OpenLANE detailed ASIC flow design:
+
+OpenLANE ASIC flow:
+
+Two modes of operation of openLANE is:
+
+autonomus - its like a push button flow, does everything automatically
+Interactive - runs through commands
+
+The flow starts with RTL synthesis. RTL is fed to YOSYS with the design constraints and translates into netlist then optimised and mapped into the synthesizable cells from SCL using ABC. ABC is used during optimization. When it comes to OpenLANE we have stratagies where some tragets least area and the other on best timing, this is called SYNTHESIS EXPLORATION.
