@@ -153,3 +153,15 @@ LEC : Since, we do optomization in Physical Implementation, the output netlist f
 
 Antenna : When a metal wire segment is fabricated and its long enought, it act as antenna and collect charges which can damage the transistor gate that is connected to that wire. so length of the wire must be limited. Usually this job is done by router, if he fails, there are 2 solutions.
 
+1. Bridging : In this we bridge using top layer so we go upto the top layer and drop back to to the metal layer that has long wire segment.
+
+2. Antenna diode : Insert the diode next to the transistor that is getting effected by this long wire.
+
+Using OpenLANE we took a preventive approach. we created a fake antenna diode and placed next to every cell during placement. when Magic runs for antenna checkers on the routed layout and reports a violation on a cell input pin, then replace the fake with the real one.
+
+![dealing_with_antenna](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/335c5d56-5158-4af1-b22e-42b83d49b9eb)`
+
+![dealing_with_antenna_violations2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/ec1cc368-d883-4f52-a8e3-4666178524fb)
+
+
+
