@@ -215,6 +215,12 @@ package require openlane 0.9
 
 ![ubuntu_commands6](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/7dd7e495-d4a7-4895-8fb1-6b4db2334587)
 
+after that we need to prepare design files by using below command
+
+prep -design picorv32a
+
+
+
 
 
 
