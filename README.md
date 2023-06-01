@@ -137,4 +137,7 @@ The flow starts with RTL synthesis. RTL is fed to YOSYS with the design constrai
 
 Design exploration : When you have more no of configurations in our design, the Design exploration does sweeping job and gives an design matrix which has report on violations, cell count, runtime, utilization etc and from that we can get the best set of configurations and clean layout.
 
+![design_exploration](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/fc1100f3-5581-486d-b672-db3e341a598a)
+
+OpenLANE Regression Testing : The design exploration utility is used for regression testing. OpenLANE already does this so that we can run the experssions on serveal configurations and compare them with the best one. It is something like Iteration.
 
