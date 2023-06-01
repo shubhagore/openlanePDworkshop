@@ -195,5 +195,9 @@ libs.tech contain all the information related to tool.
 
 We will be working on sky130_fd_sc_hd. (fd - foundary, sc - standard cell, hd - high density)
 
+![ubuntu_commands5](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/f7f6df35-af60-47cd-9423-3587efc401d6)
 
+In the above figure, there is a folder by name techlef which contains the layer information.  
+
+SKY_L2 - Design preparation step:
 
