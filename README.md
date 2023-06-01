@@ -81,8 +81,17 @@ Routing:
 
 After clock, Signal routing takes place. For each metal layer PDK defines thickness, pitch,width, tracks etc.
 
-
+![routing](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/57db0967-9581-45f9-935f-dbce47ae764b)
 
 SKY130 has 6 layers. The lowest layer is used for interconnects and is made of titanium nitride and all 5 layers are aluminium. Most routers are grid routers and metal tracks form a routing grid. since the grid is huge, we use divide and conquer approach. Global Routing is performed using coarse grained grids generating routing guides. Fine grained grids uses these routing gudies and impplement the actual routing between wires.
 
+![routing2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/6b8a6df1-fb7f-469c-99b6-319f1ad932b3)
 
+Signoff:
+
+Once Routing is done, we do verifictaion during signoff
+
+1. Physical verification :
+Design rule checks (DRC) : verifies whether our design meets design rules. (performed by MAGIC) Layout vs schematic (LVS) : verifies whether our layout matches with the netlist schematic.(MAGIC AND NETGEN).
+
+2. Timing Verification : Static Timing Analysis : Checks whether our design meets all teh timing constraints and is running with the designated frequency.
