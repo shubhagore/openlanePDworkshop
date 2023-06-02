@@ -43,7 +43,6 @@
 Designing the digital application in an automated way requires several elemnets. The elements include hardware descriptive language, EDA tools and Process design kit (PDK) data
 ![digital_ASIC_design](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2cd65f27-8f31-4cd3-bfc1-ce8ca5f1d35d)
 
-
 **Open source digital ASIC design:**
 
 ![open_source_digital_asic_design](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/dbeedaef-770a-4510-93cc-6a56616fe18e)
@@ -181,14 +180,16 @@ Using OpenLANE we took a preventive approach. we created a fake antenna diode an
 ### **SKY_L1 - OpenLANE directory structure in detail:**
 
 * OpenLANE is a flow which consists of many opensource tools.
-
 * The main aim is to have a complete RTL to GDSII flow.
+* The working directory is **/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/**
 
-*Few of the linux commands useful are,
-** cd -------------> change diectory - This is to change the path
-** ls -------------> list - This is to list the files and directories present in the path in which we are there
-** ls -lrt --------> This will list all the files and directories in the path in the chronological order 
-** ls --help ------> This can be used to get more details on ls command
+
+
+* Few of the linux commands useful are,
+  * cd -------------> change diectory - This is to change the path
+  * ls -------------> list - This is to list the files and directories present in the path in which we are there
+  * ls -lrt --------> This will list all the files and directories in the path in the chronological order 
+  * ls --help ------> This can be used to get more details on ls command
 
 ![ubuntu_commands1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/c7155d53-07e1-4c31-94b2-48229dacbf7a)
 
