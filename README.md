@@ -195,26 +195,26 @@ Using OpenLANE we took a preventive approach. we created a fake antenna diode an
 
 * PDK folder in the path **Desktop/work/tools/openlane_work_dir/** contains all the info related to PDK.
 
-The PDK which we are using for this workshop is **skywater_130nm PDK**.
+* The PDK which we are using for this workshop is **skywater_130nm PDK**.
 
-Inside sky130A we can see 2 sub directories namely **libs.ref** and **libs.tech** as shown in the below figure.
+* Inside sky130A we can see 2 sub directories namely **libs.ref** and **libs.tech** as shown in the below figure.
 
 ![ubuntu_commands2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2b6cad42-549c-4d9c-9fb0-dba9466ccae3)
 
-libs.ref contains all the technology specific information like timing, cell, lef
+  * libs.ref contains all the technology specific information like timing, cell, lef
 
 ![ubuntu_commands3](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/9c3c12ae-3755-4606-863e-0db56d616ae1)
 
-libs.tech contain all the information related to tool. 
+  * libs.tech contain all the information related to tool. 
 
 ![ubuntu_commands4](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/246abd8e-9334-4eee-a18b-a12ae91ebd0a)
 
-We will be working on **sky130_fd_sc_hd**. 
-* **fd** - foundary
-* **sc** - standard cell
-* **hd** - high density
+* We will be working on **sky130_fd_sc_hd**. 
+  * **fd** - foundary
+  * **sc** - standard cell
+  * **hd** - high density
 
-In the below figure, there is a folder by name **techlef** which contains the layer information.
+* In the below figure, there is a folder by name **techlef** which contains the layer information.
 
 ![ubuntu_commands5](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/f7f6df35-af60-47cd-9423-3587efc401d6)
 
@@ -231,25 +231,25 @@ In the below figure, there is a folder by name **techlef** which contains the la
 * It is the script which will invoke the Openlane.
 * If we use the lab session from https://www.vlsisystemdesign.com/ then it is not required to configure Docker but if we use our PC we need to configure docker. I have used my PC for this practical session.
 
-The design for our work is picorv32a, which will be choosen from the following direectory **/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs**
+*The design for our work is picorv32a, which will be choosen from the following direectory **/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs**
 
 ![ubuntu_commands8](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/87b2d7fa-5b7b-48b6-95e7-e7f638d0c0c3)
 
-The picorv32a will have 3 files,
-* **src file:** RTL will be present and sdc file
-* **config.tcl:** bypasses any configs already done into openLANE., i.e, many of the switches already have a default value. **config.tcl** will have the highest **priority**. The below image shows the config.tcl deatils
+* The picorv32a will have 3 files,
+  * **src file:** RTL will be present and sdc file
+  * **config.tcl:** bypasses any configs already done into openLANE., i.e, many of the switches already have a default value. **config.tcl** will have the highest **priority**. The below image shows the config.tcl deatils
 
 ![ubuntu_commands9](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/e734775f-a978-470d-a7c4-9939ef47e8da)
 
-* **sky130A_sky130_fd_sc_hd_config.tcl**
+  * **sky130A_sky130_fd_sc_hd_config.tcl**
 
-After this we need to input all the packages that are required to run his flow by using below command
+* After this we need to input all the packages that are required to run his flow by using below command
 
 **_package require openlane 0.9_**
 
 ![ubuntu_commands7](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/073ac8f7-1013-437a-a011-21b7809ae76c)
 
-Before running synthesis, we need to prepare the data structure and the design setup stage which will be setting up the data for the file system and data structure. We need to prepare the file system specific to the flow, so that the exact data will be picked up by the correct location by the tool. So we need to create that location by running the command,
+* Before running synthesis, we need to prepare the data structure and the design setup stage which will be setting up the data for the file system and data structure. We need to prepare the file system specific to the flow, so that the exact data will be picked up by the correct location by the tool. So we need to create that location by running the command,
 
 _**prep -design picorv32a**_
 
@@ -257,25 +257,26 @@ This stage is known as **design preparation stage.**
 
 ![ubuntu_commands10](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/885043ae-ee6f-4d30-bf27-5c8141e81433)
 
-In the above figure **merging lefs** indicates that it **merges two lef files** namely **cell specific lef file** and **technology related lef file**.
+* In the above figure **merging lefs** indicates that it **merges two lef files** namely **cell specific lef file** and **technology related lef file**.
 
-Before preparing the file system the picorv32a folder contains 3 main files as shown below.
+* Before preparing the file system the picorv32a folder contains 3 main files as shown below.
 
 ![ubuntu_commands11](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/03e61dba-3824-41c7-a499-4b4809ba9d87)
 
 ### **SKY_L3 - Review files after design prep and run synthesis:**
 
-After preparing the file system the picorv32a folder contains one extra folder by the name run and this will include all the necessary files as shown below.
+* After preparing the file system the picorv32a folder contains one extra folder by the name run and this will include all the necessary files as shown below.
 
 ![ubuntu_commands12](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/0b72749a-6338-4ef5-b830-269e35572199)
 
-Here inside tmp folder we can see the **merged lef** file created during the file system preparation.
+  * Here inside tmp folder we can see the **merged lef** file created during the file system preparation.
+  * the results folder will have seperate folders for each step 
+  * The config.tcl present in the newly created runs folder will basically shows all the default parameters being taken by the run.
+  * cmds.log file will have all the commands being used.
 
+![ubuntu_commands13](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/759e027d-911a-4dc1-b877-343966da4171)
 
+* The next step is to run synthesis using the below command,
 
-
-
-
-
-
+_**run_synthesis**_
 
