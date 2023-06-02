@@ -259,9 +259,11 @@ This stage is known as **design preparation stage.**
 
 In the above figure **merging lefs** indicates that it **merges two lef files** namely **cell specific lef file** and **technology related lef file**.
 
-Before preparing the file system the picorv32a folder contains 3 main files as shown beow.
+Before preparing the file system the picorv32a folder contains 3 main files as shown below.
 
+![ubuntu_commands11](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/03e61dba-3824-41c7-a499-4b4809ba9d87)
 
+After preparing the file system the picorv32a folder contains one extra folder by the name run and this will include all the necessary files as shown below.
 
 
 
