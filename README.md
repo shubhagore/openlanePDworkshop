@@ -320,3 +320,9 @@ In my sythesis run the counts are as shown in the figure below,
 
 * In the physical design flow, the first step is to define the height and width of the core and the die.
 
+![define_width_height_core_die](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/e7328a58-31e4-4ac6-817f-4f651670ad42)
+
+  * We start with the basic netlist, say 2 flip-flops (one launch and other capture) and a combinational logic in between.
+
+
+  * A netlist basically describes the all the connectivity of an electric design.
