@@ -239,12 +239,16 @@ The picorv32a will have 3 files,
 * **src file:** RTL will be present and sdc file
 * **config.tcl:** bypasses any configs already done into openLANE., i.e, many of the switches already have a default value. **config.tcl** will have the highest **priority**. The below image shows the config.tcl deatils
 
+![ubuntu_commands9](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/e734775f-a978-470d-a7c4-9939ef47e8da)
+
+* **sky130A_sky130_fd_sc_hd_config.tcl**
 
 
 
 
 
-After this we need to include package by using below command
+
+After this we need to input all the packages that are required to run his flow by using below command
 
 package require openlane 0.9
 
