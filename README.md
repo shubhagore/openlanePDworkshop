@@ -318,4 +318,5 @@ In my sythesis run the counts are as shown in the figure below,
 
 ### **SK_L1 - Utilization factor and aspect ratio:**
 
+* In the physical design flow, the first step is to define the height and width of the core and the die.
 
