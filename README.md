@@ -183,7 +183,7 @@ Using OpenLANE we took a preventive approach. we created a fake antenna diode an
 * The main aim is to have a complete RTL to GDSII flow.
 * The working directory is **/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/**
 
-
+![ubuntu_commands0](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/72b62af4-2aad-4579-b3b2-cd7f85030d1e)
 
 * Few of the linux commands useful are,
   * cd -------------> change diectory - This is to change the path
