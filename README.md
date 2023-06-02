@@ -237,7 +237,9 @@ The design for our work is picorv32a, which will be choosen from the following d
 
 The picorv32a will have 3 files,
 * **src file:** RTL will be present and sdc file
-* **config.tcl:** bypasses any configs already done into openLANE., i.e, many of the switches already have a default value. The below image shows the config.tcl deatils
+* **config.tcl:** bypasses any configs already done into openLANE., i.e, many of the switches already have a default value. **config.tcl** will have the highest **priority**. The below image shows the config.tcl deatils
+
+
 
 
 
