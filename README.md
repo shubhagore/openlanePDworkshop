@@ -263,7 +263,13 @@ Before preparing the file system the picorv32a folder contains 3 main files as s
 
 ![ubuntu_commands11](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/03e61dba-3824-41c7-a499-4b4809ba9d87)
 
+### **SKY_L3 - Review files after design prep and run synthesis:**
+
 After preparing the file system the picorv32a folder contains one extra folder by the name run and this will include all the necessary files as shown below.
+
+![ubuntu_commands12](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/0b72749a-6338-4ef5-b830-269e35572199)
+
+Here inside tmp folder we can see the **merged lef** file created during the file system preparation.
 
 
 
