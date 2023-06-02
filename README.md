@@ -330,4 +330,10 @@ In my sythesis run the counts are as shown in the figure below,
   * Need to convert the symbols into the physical dimensions.
   * Total length and width would be 2 x 2 = 4 sq units(area), this is the minimum area that would be occupied.
 
+![dimension1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/76418f90-4919-4433-a462-8d1abc850702)
+
+  * On the silicon wafer, we have one section referred to as the **die** and inside the die, there is the **core**.
+  * The **die encapsulates the core**, a **die** is a small semiconductor material specimen on which the fundamental circuit is fabricated.
+
+
 
