@@ -280,3 +280,14 @@ This stage is known as **design preparation stage.**
 
 _**run_synthesis**_
 
+![synthesis_run2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/b3761962-0178-426f-b604-16a687e4e311)
+
+### **SKY_L4 - OpenLANE project git link decription:**
+
+* Should refer to github efabless site and fossi dial up
+
+### **SKY_L5 - Steps to characterize synthesis results:**
+
+* **Flop ratio = No. of D flip flop / Total number of cells**
+
+In my sythesis run the counts are as shown in the figure below,
