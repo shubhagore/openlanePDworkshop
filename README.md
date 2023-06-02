@@ -180,27 +180,31 @@ Using OpenLANE we took a preventive approach. we created a fake antenna diode an
 
 ### **SKY_L1 - OpenLANE directory structure in detail:**
 
-Few of the linux commands useful are,
-* cd -------------> change diectory - This is to change the path
-* ls -------------> list - This is to list the files and directories present in the path in which we are there
-* ls -lrt --------> This will list all the files and directories in the path in the chronological order 
-* ls --help ------> This can be used to get more details on ls command
+* OpenLANE is a flow which consists of many opensource tools.
+
+* The main aim is to have a complete RTL to GDSII flow.
+
+*Few of the linux commands useful are,
+** cd -------------> change diectory - This is to change the path
+** ls -------------> list - This is to list the files and directories present in the path in which we are there
+** ls -lrt --------> This will list all the files and directories in the path in the chronological order 
+** ls --help ------> This can be used to get more details on ls command
 
 ![ubuntu_commands1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/c7155d53-07e1-4c31-94b2-48229dacbf7a)
 
-PDK folder in the path **Desktop/work/tools/openlane_work_dir/** contains all the info related to PDK.
+* PDK folder in the path **Desktop/work/tools/openlane_work_dir/** contains all the info related to PDK.
 
 The PDK which we are using for this workshop is **skywater_130nm PDK**.
 
-Inside sky130A we can see 2 sub directories namely libs.ref and libs.tech as shown in the below figure.
-
-libs.ref contains all the technology specific information like timing, cell, lef
+Inside sky130A we can see 2 sub directories namely **libs.ref** and **libs.tech** as shown in the below figure.
 
 ![ubuntu_commands2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2b6cad42-549c-4d9c-9fb0-dba9466ccae3)
 
-libs.tech contain all the information related to tool. 
+libs.ref contains all the technology specific information like timing, cell, lef
 
 ![ubuntu_commands3](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/9c3c12ae-3755-4606-863e-0db56d616ae1)
+
+libs.tech contain all the information related to tool. 
 
 ![ubuntu_commands4](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/246abd8e-9334-4eee-a18b-a12ae91ebd0a)
 
