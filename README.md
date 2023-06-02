@@ -233,8 +233,11 @@ In the below figure, there is a folder by name **techlef** which contains the la
 
 The design for our work is picorv32a, which will be choosen from the following direectory **/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs**
 
+![ubuntu_commands8](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/87b2d7fa-5b7b-48b6-95e7-e7f638d0c0c3)
 
-
+The picorv32a will have 3 files,
+* **src file:** RTL will be present and sdc file
+* **config.tcl:** bypasses any configs already done into openLANE., i.e, many of the switches already have a default value. The below image shows the config.tcl deatils
 
 
 
