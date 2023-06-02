@@ -291,3 +291,5 @@ _**run_synthesis**_
 * **Flop ratio = No. of D flip flop / Total number of cells**
 
 In my sythesis run the counts are as shown in the figure below,
+
+
