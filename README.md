@@ -223,16 +223,15 @@ In the below figure, there is a folder by name **techlef** which contains the la
 ![ubuntu_commands7](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/073ac8f7-1013-437a-a011-21b7809ae76c)
 
 *docker*
+
 *./flow.tcl -interactive*
 
 * The docker command is executed first and then the tcl script.
 * The script here will run in interactive mode (step by step execution).
+* It is the script which will invoke the Openlane.
+* If we use the lab session from https://www.vlsisystemdesign.com/ then it is not required to configure Docker but if we use our PC we need to configure docker. I have used my PC for this practical session.
 
-![ubuntu_commands7](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/073ac8f7-1013-437a-a011-21b7809ae76c)
 
-The design used is picorv32a and is executed by using OpenLANE -interactive mode. If we use the lab session from https://www.vlsisystemdesign.com/ then it is not required to configure Docker but if we use our PC we need to configure docker. I used my PC for this practical session. I configured docker and then opened flow.tcl file in intercative mode . It is the script which will invoke the Openlane.
-
-./flow.tcl -interactive
 
 After this we need to include package by using below command
 
