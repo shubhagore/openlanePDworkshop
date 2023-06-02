@@ -328,3 +328,6 @@ In my sythesis run the counts are as shown in the figure below,
 ![netlist_eg](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/eb6eafb5-5714-4dce-a2b9-b4867dce79a8) 
 
   * Need to convert the symbols into the physical dimensions.
+  * Total length and width would be 2 x 2 = 4 sq units(area), this is the minimum area that would be occupied.
+
+
