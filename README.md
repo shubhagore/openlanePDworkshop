@@ -243,20 +243,22 @@ The picorv32a will have 3 files,
 
 * **sky130A_sky130_fd_sc_hd_config.tcl**
 
-
-
-
-
-
 After this we need to input all the packages that are required to run his flow by using below command
 
-package require openlane 0.9
+**_package require openlane 0.9_**
+
+![ubuntu_commands7](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/073ac8f7-1013-437a-a011-21b7809ae76c)
+
+Before running synthesis, we need to prepare the data structure and the design setup stage which will be setting up the data for the file system and data structure. We need to prepare the file system specific to the flow, so that the exact data will be picked up by the correct location by the tool. So we need to create that location by running the command,
+
+_**prep -design picorv32a**_
+
+This stage is known as **design preparation stage.**
 
 
 
-after that we need to prepare design files by using below command
 
-prep -design picorv32a
+
 
 
 
