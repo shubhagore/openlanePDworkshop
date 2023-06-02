@@ -44,40 +44,29 @@ Designing the digital application in an automated way requires several elemnets.
 ![digital_ASIC_design](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2cd65f27-8f31-4cd3-bfc1-ce8ca5f1d35d)
 
 
-Open source digital ASIC design:
+**Open source digital ASIC design:**
 
 ![open_source_digital_asic_design](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/dbeedaef-770a-4510-93cc-6a56616fe18e)
 
-PDK: PDK is the collection of files used to model a fabrication process for the EDA tools. It is the interface between designers and fabrication team. PDK includes 
+**PDK:** PDK is the collection of files used to model a fabrication process for the EDA tools. It is the interface between designers and fabrication team. PDK includes 
+* Design rules such as DRC, LVS, PEX
+* Device models,
+* Digital Standard cell Libraries,
+* I/O libraries, etc.
        
-Design rules such as DRC, LVS, PEX,
-
-Device models,
-
-Digital Standard cell Libraries,
-
-I/O libraries, etc.
-       
-
-SKY_L2 - Simplified RTL to GDSII flow:
+### **SKY_L2 - Simplified RTL to GDSII flow:**
 
 ![simplified_RTLto_GDSII_flow](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2d52f407-778f-428f-a059-f61746930e06)
 
 The flow includes the following steps,
+* Synthesis
+* Floorplan/Power planning
+* Placement
+* Clock Tree Synthesis
+* Routing
+* Signoff
 
-Synthesis
-
-Floorplan/Power planning
-
-Placement
-
-Clock Tree Synthesis
-
-Routing
-
-Signoff
-
-Synthesis: This stage converts RTL to the circuit out of components from the standard cell library (SCL). This is usually referred to as Gate level netlist. 
+**Synthesis:** This stage converts RTL to the circuit out of components from the standard cell library (SCL). This is usually referred to as Gate level netlist. 
 
 ![synthesis](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/3a69b3c9-b655-4609-bfcc-d5b8066d9db2)
 
@@ -86,10 +75,8 @@ Each standard cell has regular layout.
 Dimensions of the cell differ from eah other.
 
 Each cell has different views or models,
-
-i. Electrical (delay), HDL, spice
-
-ii. Layout (Abstract and detailed).
+* Electrical (delay), HDL, spice
+* Layout (Abstract and detailed).
 
 Floorplan: Size and shape of the die, Macro placement, I/O pins placement, rows definition and power planning are done in Floorplan.
 
@@ -126,18 +113,16 @@ SKY130 has 6 layers. The lowest layer is used for interconnects and is made of t
 Signoff:
 
 Once Routing is done, we do verifictaion during signoff
-
-1. Physical verification :
-Design rule checks (DRC) : verifies whether our design meets design rules. (performed by MAGIC) Layout vs schematic (LVS) : verifies whether our layout matches with the netlist schematic.(MAGIC AND NETGEN).
-
-2. Timing Verification : Static Timing Analysis : Checks whether our design meets all teh timing constraints and is running with the designated frequency.
+* Physical verification :
+** Design rule checks (DRC) : verifies whether our design meets design rules. (performed by MAGIC) 
+** Layout vs schematic (LVS) : verifies whether our layout matches with the netlist schematic.(MAGIC AND NETGEN).
+* Timing Verification : Static Timing Analysis : Checks whether our design meets all teh timing constraints and is running with the designated frequency.
 
 ![signoff](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2859e628-91c4-4cd3-aeec-a58c451c5af1)
 
+### **SKY_L3 - Introduction to OpenLANE and strive chipsets:**
 
-SKY_L3 - Introduction to OpenLANE and strive chipsets:
-
-OpenLANE ASIC flow:
+**OpenLANE ASIC flow:**
 
 ![openlane1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/921304b8-c487-41e8-b2e5-e7cbf960a627)
 
@@ -146,84 +131,76 @@ OpenLANE ASIC flow:
 Main goal is to produce clean GDSII without human help.
 
 Clean GDSII means, having no
+* LVS violations
+* DRC violations
+* timing violations
 
-1. LVS violations
+### **SKY_L4 - Introduction to OpenLANE detailed ASIC flow design:**
 
-2. DRC violations
-
-3. timing violations
-
-
-SKY_L4 - Introduction to OpenLANE detailed ASIC flow design:
-
-OpenLANE ASIC flow:
+**OpenLANE ASIC flow:**
 
 Two modes of operation of openLANE is:
-
-autonomus - its like a push button flow, does everything automatically
-Interactive - runs through commands
+* Autonomus - its like a push button flow, does everything automatically
+* Interactive - runs through commands
 
 ![openlane2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/851e2411-a8f4-4f2b-8bea-3387a2b6a963)
 
-The flow starts with RTL synthesis. RTL is fed to YOSYS with the design constraints and translates into netlist then optimised and mapped into the synthesizable cells from Standard cell library (SCL) using ABC. ABC is used during optimization. When it comes to OpenLANE we have stratagies where some tragets least area and the other on best timing, this is called Synthesis exploration.
+The flow starts with RTL synthesis. RTL is fed to YOSYS with the design constraints and translates into netlist then optimised and mapped into the synthesizable cells from Standard cell library (SCL) using ABC. ABC is used during optimization. When it comes to OpenLANE we have stratagies where some tragets least area and the other on best timing, this is called **Synthesis exploration**.
 
 ![synthesis_exploration](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/f14d30f6-e906-4d2c-95ae-82ca6dfb12cd)
 
-Design exploration : When you have more no of configurations in our design, the Design exploration does sweeping job and gives an design matrix which has report on violations, cell count, runtime, utilization etc and from that we can get the best set of configurations and clean layout.
+**Design exploration:** When you have more no of configurations in our design, the Design exploration does sweeping job and gives an design matrix which has report on violations, cell count, runtime, utilization etc and from that we can get the best set of configurations and clean layout.
 
 ![design_exploration](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/fc1100f3-5581-486d-b672-db3e341a598a)
 
-OpenLANE Regression Testing : The design exploration utility is used for regression testing. OpenLANE already does this so that we can run the experssion
+**OpenLANE Regression Testing:** The design exploration utility is used for regression testing. OpenLANE already does this so that we can run the experssion
 
 ![openlane_regression_testing](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/88bb2eb5-8ba0-405d-865f-c4be47016551)
 
-DFT (DESIGN FOR TEST) : Its an additional testing that is done for correctness of the design by generating test vectors or stimulus.`
+**DFT (DESIGN FOR TEST):** Its an additional testing that is done for correctness of the design by generating test vectors or stimulus.`
 
 ![dft](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/36974b27-3f05-4531-8bdf-82aefa9167fa)
 
-LEC : Since, we do optomization in Physical Implementation, the output netlist from this might be different from the synthesis netlist. Inorder to avoid any further violations functionally, we need to logically check the design before and after PnR. This is known as Logic Equivalence check
+**LEC:** Since, we do optomization in Physical Implementation, the output netlist from this might be different from the synthesis netlist. Inorder to avoid any further violations functionally, we need to logically check the design before and after PnR. This is known as Logic Equivalence check
 
 ![lec](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/7bd192ac-2c61-40cf-8d8f-86faf91ce83b)
 
-Antenna : When a metal wire segment is fabricated and its long enought, it act as antenna and collect charges which can damage the transistor gate that is connected to that wire. so length of the wire must be limited. Usually this job is done by router, if he fails, there are 2 solutions.
+**Antenna:** When a metal wire segment is fabricated and its long enought, it act as antenna and collect charges which can damage the transistor gate that is connected to that wire. so length of the wire must be limited. Usually this job is done by router, if he fails, there are 2 solutions.
+* **Bridging:** In this we bridge using top layer so we go upto the top layer and drop back to to the metal layer that has long wire segment.
+* **Antenna diode:** Insert the diode next to the transistor that is getting effected by this long wire.
 
-1. Bridging : In this we bridge using top layer so we go upto the top layer and drop back to to the metal layer that has long wire segment.
-
-2. Antenna diode : Insert the diode next to the transistor that is getting effected by this long wire.
-
-Using OpenLANE we took a preventive approach. we created a fake antenna diode and placed next to every cell during placement. when Magic runs for antenna checkers on the routed layout and reports a violation on a cell input pin, then replace the fake with the real one.
+Using OpenLANE we took a preventive approach. we created a fake antenna diode and placed next to every cell during placement. When Magic runs for antenna checkers on the routed layout and reports a violation on a cell input pin, then replace the fake with the real one.
 
 ![dealing_with_antenna](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/335c5d56-5158-4af1-b22e-42b83d49b9eb)`
 
 ![dealing_with_antenna_violations2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/ec1cc368-d883-4f52-a8e3-4666178524fb)
 
 
-SKY130_D1_SK3 - Get familiar to open-source EDA tools:
+## **SKY130_D1_SK3 - Get familiar to open-source EDA tools:**
 
-SKY_L1 - OpenLANE directory structure in detail:
+### **SKY_L1 - OpenLANE directory structure in detail:**
 
 Few of the linux commands useful are,
-
-1. cd -------------> change diectory - This is to change the path
-2. ls -------------> list - This is to list the files and directories present in the path in which we are there
-3. ls -lrt --------> This will list all the files and directories in the path in the chronological order 
-4. ls --help ------> This can be used to get more details on ls command
+* cd -------------> change diectory - This is to change the path
+* ls -------------> list - This is to list the files and directories present in the path in which we are there
+* ls -lrt --------> This will list all the files and directories in the path in the chronological order 
+* ls --help ------> This can be used to get more details on ls command
 
 ![ubuntu_commands1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/c7155d53-07e1-4c31-94b2-48229dacbf7a)
 
-PDK folder in the path Desktop/work/tools/openlane_work_dir contains all the info related to PDK.
+PDK folder in the path **Desktop/work/tools/openlane_work_dir/** contains all the info related to PDK.
 
-The PDK which we are using for this workshop is skywater_130nm PDK.
+The PDK which we are using for this workshop is **skywater_130nm PDK**.
 
-![ubuntu_commands2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2b6cad42-549c-4d9c-9fb0-dba9466ccae3)
-
-Inside sky130A we can see 2 sub directories namely libs.ref and libs.tech as shown in the above figure.
+Inside sky130A we can see 2 sub directories namely libs.ref and libs.tech as shown in the below figure.
 
 libs.ref contains all the technology specific information like timing, cell, lef
 
-![ubuntu_commands3](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/9c3c12ae-3755-4606-863e-0db56d616ae1)
+![ubuntu_commands2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2b6cad42-549c-4d9c-9fb0-dba9466ccae3)
 
 libs.tech contain all the information related to tool. 
+
+![ubuntu_commands3](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/9c3c12ae-3755-4606-863e-0db56d616ae1)
 
 ![ubuntu_commands4](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/246abd8e-9334-4eee-a18b-a12ae91ebd0a)
 
