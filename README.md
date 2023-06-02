@@ -220,7 +220,13 @@ In the below figure, there is a folder by name **techlef** which contains the la
 
 ### **SKY_L2 - Design preparation step:**
 
-The below figure shows the working directory.
+![ubuntu_commands7](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/073ac8f7-1013-437a-a011-21b7809ae76c)
+
+*docker*
+*./flow.tcl -interactive*
+
+* The docker command is executed first and then the tcl script.
+* The script here will run in interactive mode (step by step execution).
 
 ![ubuntu_commands7](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/073ac8f7-1013-437a-a011-21b7809ae76c)
 
