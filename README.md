@@ -231,13 +231,19 @@ In the below figure, there is a folder by name **techlef** which contains the la
 * It is the script which will invoke the Openlane.
 * If we use the lab session from https://www.vlsisystemdesign.com/ then it is not required to configure Docker but if we use our PC we need to configure docker. I have used my PC for this practical session.
 
+The design for our work is picorv32a, which will be choosen from the following direectory **/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs**
+
+
+
+
+
 
 
 After this we need to include package by using below command
 
 package require openlane 0.9
 
-![ubuntu_commands6](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/7dd7e495-d4a7-4895-8fb1-6b4db2334587)
+
 
 after that we need to prepare design files by using below command
 
