@@ -300,7 +300,16 @@ In my sythesis run the counts are as shown in the figure below,
 * Flop percentage = 10.8429
 
 * The reports and results after synthesis can be found in the respective folders.
+
+![synthesis_output3](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/bf8a3d31-9c17-4135-8d43-8d1fdc2af70c)
+
+![synthesis_output4](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/bfe441ef-ae01-4c5f-9578-69363f2208b2)
+
 * The synthesis statistical report will be as shown below,
+
+![synthesis_output5](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/13a43fb4-46d2-4dbe-ac45-4f30c9682b6a)
+
+![synthesis_output6](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/0d6db82e-aaeb-45b6-b79b-4b6612ea58df)
 
 
 
