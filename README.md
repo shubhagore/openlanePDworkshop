@@ -255,6 +255,12 @@ _**prep -design picorv32a**_
 
 This stage is known as **design preparation stage.**
 
+![ubuntu_commands10](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/885043ae-ee6f-4d30-bf27-5c8141e81433)
+
+In the above figure **merging lefs** indicates that it **merges two lef files** namely **cell specific lef file** and **technology related lef file**.
+
+Before preparing the file system the picorv32a folder contains 3 main files as shown beow.
+
 
 
 
