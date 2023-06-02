@@ -78,7 +78,7 @@ Each cell has different views or models,
 * Electrical (delay), HDL, spice
 * Layout (Abstract and detailed).
 
-Floorplan: Size and shape of the die, Macro placement, I/O pins placement, rows definition and power planning are done in Floorplan.
+**Floorplan:** Size and shape of the die, Macro placement, I/O pins placement, rows definition and power planning are done in Floorplan.
 
 ![floorplan](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/daaedeb0-7da9-4741-8531-ac05d8d6a74d)
 
@@ -86,7 +86,7 @@ In power planning, power is circulated using power grid which has alternate hori
 
 ![power_planning](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/d24da1df-57d1-4b68-b3b4-6ba059beb12b)
 
-Placement: 
+**Placement: **
 
 According to the netlist, cells are placed in their resepctive locations and cells might overlap, so we do detailed placement to avoid the overlapping and flipped to save site row area (cells are legalized).
 
@@ -94,13 +94,13 @@ According to the netlist, cells are placed in their resepctive locations and cel
 
 ![placement1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/f51d9dd9-8bf3-462b-a5b0-46da882e4008)
 
-Clock tree synthesis:
+**Clock tree synthesis:**
 
 Building a clock tree such that clock reached every clock pin of a sequential block with min skew and insertion delay.
 
 ![cts](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/f4946890-8efe-49d6-9845-80b53aa6664d)
 
-Routing:
+**Routing:**
 
 After clock, Signal routing takes place. For each metal layer PDK defines thickness, pitch,width, tracks etc.
 
@@ -110,12 +110,12 @@ SKY130 has 6 layers. The lowest layer is used for interconnects and is made of t
 
 ![routing2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/6b8a6df1-fb7f-469c-99b6-319f1ad932b3)
 
-Signoff:
+**Signoff:**
 
 Once Routing is done, we do verifictaion during signoff
 * Physical verification :
-** Design rule checks (DRC) : verifies whether our design meets design rules. (performed by MAGIC) 
-** Layout vs schematic (LVS) : verifies whether our layout matches with the netlist schematic.(MAGIC AND NETGEN).
+  * Design rule checks (DRC) : verifies whether our design meets design rules. (performed by MAGIC) 
+  * Layout vs schematic (LVS) : verifies whether our layout matches with the netlist schematic.(MAGIC AND NETGEN).
 * Timing Verification : Static Timing Analysis : Checks whether our design meets all teh timing constraints and is running with the designated frequency.
 
 ![signoff](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2859e628-91c4-4cd3-aeec-a58c451c5af1)
