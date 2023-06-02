@@ -312,5 +312,10 @@ In my sythesis run the counts are as shown in the figure below,
 ![synthesis_output6](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/0d6db82e-aaeb-45b6-b79b-4b6612ea58df)
 
 
+# **Sky130 Day1 - Good floorplan vs bad floorplan and introduction to library cells:**
+
+## **SKY_130_D2_SK1 - Chip floor planning considerations:**
+
+### **SK_L1 - Utilization factor and aspect ratio:**
 
 
