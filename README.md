@@ -335,5 +335,8 @@ In my sythesis run the counts are as shown in the figure below,
   * On the silicon wafer, we have one section referred to as the **die** and inside the die, there is the **core**.
   * The **die encapsulates the core**, a **die** is a small semiconductor material specimen on which the fundamental circuit is fabricated.
 
+### **SK_L2 - Concept of pre-placed cells:**
+
+
 
 
