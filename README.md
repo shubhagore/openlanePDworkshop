@@ -339,4 +339,17 @@ In my sythesis run the counts are as shown in the figure below,
 
 * In the physical design flow, the second step is to **define the locations of the pre-placed cells**.
 
+![define_location_preplaced_cells](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/ea4b26e5-13d0-43f3-9b03-f3576cd375de)
+
+* Take a combinational logic, we needn't implement the logic everytime completely, the circuit can be divided into smaller bits
+* The individual blocks are later connected via wires.
+* The IO pins are extended and the blocks are detached, this creates 2 different modules or IP's.
+
+
+* The **advantage** of doing this is that if a particular block is being replicated multiple times, this black-boxed blocks can be implemented and then connected. Need not be implemented evey time.
+* There are IPs available in the market such as, Memory, clock-gating cell, comparators, etc. The arrangement of these IPs in a chip is called **Floorplanning**.
+* These IP's or blocks have user defined locations and hence are to be placed before the automated placement and routing. Thus these are known as **pre-placed cells**.
+
+### **SK_L3 - De-coupling capacitors:**
+
 
