@@ -318,7 +318,7 @@ In my sythesis run the counts are as shown in the figure below,
 
 ### **SK_L1 - Utilization factor and aspect ratio:**
 
-* In the physical design flow, the first step is to define the height and width of the core and the die.
+* In the physical design flow, the first step is to **define the height and width of the core and the die**.
 
 ![define_width_height_core_die](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/e7328a58-31e4-4ac6-817f-4f651670ad42)
 
@@ -337,6 +337,6 @@ In my sythesis run the counts are as shown in the figure below,
 
 ### **SK_L2 - Concept of pre-placed cells:**
 
-
+* In the physical design flow, the second step is to **define the locations of the pre-placed cells**.
 
 
