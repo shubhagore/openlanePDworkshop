@@ -345,11 +345,27 @@ In my sythesis run the counts are as shown in the figure below,
 * The individual blocks are later connected via wires.
 * The IO pins are extended and the blocks are detached, this creates 2 different modules or IP's.
 
+![division_of_ckt](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/0ce30f43-53fc-4eab-ac47-3054459b7384)
 
 * The **advantage** of doing this is that if a particular block is being replicated multiple times, this black-boxed blocks can be implemented and then connected. Need not be implemented evey time.
 * There are IPs available in the market such as, Memory, clock-gating cell, comparators, etc. The arrangement of these IPs in a chip is called **Floorplanning**.
 * These IP's or blocks have user defined locations and hence are to be placed before the automated placement and routing. Thus these are known as **pre-placed cells**.
 
 ### **SK_L3 - De-coupling capacitors:**
+
+* Consider we have the pre placed cells: block a,b and c which are memories
+  * These are only implemented once and used multiple times.
+  * The locations of these pre placed cells cannot be changed once placed. 
+  * Pre-placed cells should be surrounded by the decoupling capacitors.
+* When a particular circuit switches, it requires some current, basically at the time of switching, we can say that there is an amount of capacitance there , and when closed, it needs an amount of charge, which it requires from the supply voltage. The supply logic should be capable enough to supply required amount of current to all the gates. Similarly, it is the responsibilty of the Vss to take the charge when the gates switch from logic 1 to 0.
+* Actually there would be a drop in the wire due to resistances, inductances, capacitances, etc.
+* If the voltage drop is too huge, proper logic 1 and logic 0 cannot be defined and will lead to errors. This is the problem of having a large physical distance between the voltage source and the circuit component.
+* The voltage drop should be within the **noise margin**. It shouldn't be in the undefined state.
+* This problem can be solved by using **decoupling capacitos** which are large capacitors, completely filled with charge.
+* The capacitor essentially de couples the circuit from the power supply
+* Whenever there is switching activity, the capacitor slowly depletes its charge and when no switching takes place, then the capacitor replenishes itself.
+* The preplaced cells are placed with Decaps to ensure no problems occur
+* Local communication(inside the preplaced cells) is taken care of but global planning is to be taken care of next.
+
 
 
