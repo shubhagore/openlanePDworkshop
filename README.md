@@ -376,3 +376,5 @@ In my sythesis run the counts are as shown in the figure below,
 
 * When all the capacitances want to charge, they demand current at the same time and therefore there is a **voltage droop**, it should also not exceed the Noise margin level.
 
+![voltage_droop](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/37df99a2-28b6-4e1c-8457-55ab9acffa0e)
+
