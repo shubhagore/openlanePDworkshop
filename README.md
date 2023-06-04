@@ -371,4 +371,8 @@ In my sythesis run the counts are as shown in the figure below,
 
 * All the capacitors which were charged to logic to 1 has to discharge to logic 0  through a single **ground tap point**. This will create the **bump** in ground tap point.
 * **Ground bounce** is a phenomenon when all the capacitances discharge at the same time, if this bump exceeds the noise margin level, it can lead to an undefined logic value.
-* 
+
+![ground_bounce](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/d5b6a8b3-8f4d-41df-9117-fc64e210663b)
+
+* When all the capacitances want to charge, they demand current at the same time and therefore there is a **voltage droop**, it should also not exceed the Noise margin level.
+
