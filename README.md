@@ -367,5 +367,8 @@ In my sythesis run the counts are as shown in the figure below,
 * The preplaced cells are placed with Decaps to ensure no problems occur
 * Local communication(inside the preplaced cells) is taken care of but global planning is to be taken care of next.
 
+### **SK_L4 - Power planning:**
 
-
+* All the capacitors which were charged to logic to 1 has to discharge to logic 0  through a single **ground tap point**. This will create the **bump** in ground tap point.
+* **Ground bounce** is a phenomenon when all the capacitances discharge at the same time, if this bump exceeds the noise margin level, it can lead to an undefined logic value.
+* 
