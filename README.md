@@ -420,6 +420,16 @@ In my sythesis run the counts are as shown in the figure below,
 
 ### **SK_L7 - Review floorplan files and steps to view floorplan:**
 
+* The config.tcl file will have all the default settings. Highest priority is for the sky130A_sky130_fd_sc_hd_config.tcl.
+* The results/floorplan contains a def file (**Design exchange format**).
+* The def file contains a parameter as DIEAREA (lower x axis, lower y axis) (upper x axix, upper y axis)
+* 1 micron = 1000 database units.
 
+![fp_def](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/5e14a922-e730-450f-842a-d998c8b6f761)
 
+* To see the actual layout after floorplan, we use magic and the command is as below,
+
+**magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &**
+
+### **SK_L8 - Review of floorplan using magic:**
 
