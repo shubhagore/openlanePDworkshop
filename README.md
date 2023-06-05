@@ -395,9 +395,30 @@ In my sythesis run the counts are as shown in the figure below,
 
 ![pin_placement](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/f9569626-1459-498e-bf48-faeac759937c)
 
+### **SK_L6 - Steps to run floorplan using OpenLANE:**
 
+* Following synthesis the next stage is floorplan. 
+* In floorplan die area, core area, aspect ratio, utilization factor are set, place macros and pins, power distribution (pg creation) is done.
+* We can view the deafult configuration file (README.md) in the path **~/Desktop/work/tools/openlane_working_dir/openlane/configuration**.
 
+![readme_file1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/7e6a49fe-cc69-4b84-afcd-5568efcb8a11)
 
+![readme_file2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/eea1a618-446d-488d-a4cc-07f4239dbf74)
+
+* For floorplan we have switches. Few of them are floorplan core utilization, floorplan aspect ratio, floorplan sizing, die area, etc.
+* The above mentioned parameters are set in the .tcl file of respective stage in the path **~/Desktop/work/tools/openlane_working_dir/openlane/configuration**.
+
+![fp_tcl1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/6dd41dd4-7b7c-444e-95d9-ce52ea6fd94e)
+
+![fp_tcl2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/c09f40ca-6237-4f3b-8ed8-dcc5f4d9834f)
+
+* FP_IO_MODE indicates how we need the pin configuration should be around the core 
+  * If pin mode 1: random poition, but equidistant
+  * If pin mode 0: not equidistant
+* The highest priority for these defaults will be **sky130A_sky130_fd_sc_hd_config.tcl**, and then **config.tcl**, and then the **tcl file** inside the folder as shown above.
+* In openlane flow, verical metal and horizontal metal values (mentioned in the config.tcl file in the path openlane_working_dir/design/picorv32a/config.tcl) are 1 more than the normal ones (mentioned in floorplan.tcl file).
+
+### **SK_L7 - Review floorplan files and steps to view floorplan:**
 
 
 
