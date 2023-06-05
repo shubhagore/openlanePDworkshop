@@ -433,3 +433,17 @@ In my sythesis run the counts are as shown in the figure below,
 
 ### **SK_L8 - Review of floorplan using magic:**
 
+* To select the entire layout **press s** and then **press v** this will fit the layout to the center.
+* To **zoom the specific part of the layout first** **click on left of mouse and then right side of the mouse to form a box and then press z on the keyboard**.
+* To select a particular object bring the cursor on the object and then press s n the keyboard.
+
+![fp_layout1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/3cdde638-4474-4e48-8408-7ab92d2da68a)
+
+![fp_layout2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/63285457-2b40-4899-b832-f23cf140bf32)
+
+
+
+
+
+
+
