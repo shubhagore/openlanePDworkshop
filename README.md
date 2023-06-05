@@ -378,3 +378,27 @@ In my sythesis run the counts are as shown in the figure below,
 
 ![voltage_droop](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/37df99a2-28b6-4e1c-8457-55ab9acffa0e)
 
+* The above problem can be solved by having **multiple power supplies** instead of a single power supply. The components can withdraw the power from the nearest power source with the help of having multiple power supplies.
+
+![multiple_source](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/5076ee48-5ec1-49cd-bf9e-b5524e896ea5)
+
+### **SK_L5 - Pin placement and logical cell placement blockage:**
+
+* The connectivity information between the gates is coded using the **verilog/VHDL** language and is called the **netlist**. Below figure shows the example of the netlist.
+
+![eg1_pin_placement2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/a3ecbe23-ab29-41a2-9689-efc7f0cee952)
+
+* General convention is to place all the **input ports** on the **left hand side** and **output ports** on the **right hand side**. It also depends on the designer.
+* Ordering of **input and output ports are random** because it depends on the placement of the cells.
+* The **clock ports are bigger** in size than the data ports as the clock ports keeps driving the complete chip continuosly. Thus resistance should be lower in the clock signal path. Hence lower the resistance bigger is the size of the clock port.
+* None of the automated placement and roting tool places the cell in the IO area. Th IO area should be blocked for the cell placement and routing. Thus we perform logical cell placement blockage. Thus no cells are pleced in the IO area as this location is reserved for pin placement.
+
+![pin_placement](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/f9569626-1459-498e-bf48-faeac759937c)
+
+
+
+
+
+
+
+
