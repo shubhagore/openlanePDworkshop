@@ -542,9 +542,63 @@ Directory: results/placement/
   * **Design steps**:
   * **Outputs**: These are actual used by EDA tool
 
+### **SK_L2 - Circuit design step:**
 
+* The separation between the power rail and the ground rail will decide the cell height. It is the responsibility of the library developer to maintain this cell height.
+* **Drive strength decides the cell width**.
+* The top level designer deicdes on the supply voltage.
+* The **design steps are three**:
+  * **Circuit design:** 
+    * Implement the function
+    * Model the pmos and nmos to meet the library specifications( for example, w/l ratios) 
+    * Typical output is **CDL (circuit description language)**.
+  * **Layout design:**
+    * Implement the function using MOS transistors
+    * to get the PMOS and NMOS network graphs from the implemented design 
+  * **Characterization**
 
+### **SK_L3 - Layout design step:**
 
+* The first step is to implement the function
+* Next step is to get the PMOS and NMOS network graphs from the implemented design 
+* To obtain the path of layout is Euler's path and stick diagram.
+* **Euler's path**: Path that is being traced only once. Based on the Euler's path, a stick diagram is drawn
+* The next step is to convert this stick diagram into a proper layout, by also following the DRC rules and the top level user specifications.
+* The layout can be drawn using an open source tool called **MAGIC**.
+* The out of layout is GDSll
+* With the layout in hand the final step is to extract the parasitics from the layout and characterize it interms of timing.
+* GDSII, LEF , extracted spice netlist(.cir) are the outputs.
+* **cir file**: parasitics of each and every element
+* The next step is characterization to obtain the timing, noise and power information: output is .libs file
+
+### **SK_L4 - Typical characterizaion flow:**
+
+* From the input stage, the output is a layout, description of the entire circuit, SPICE extracted netlist, subcircuit(has nmos and pmos models)
+
+* Read in the model: This comes out of the foundry
+* Read the extradcted SPICE netlist
+* To recognise the behaviour of the circuit
+* To read the subcircuit of the inverter
+* Attach the necessary power sources
+* Apply the stimulus (known as characterization setup)
+* Provide the necessary output capacitances
+* Provide the necessary simulation commands (trans simulation, DC simulation..etc)
+* Next step is to feed in all these inputs from the above steps in the form of a characterization software called as **GUNA**. The software will generate Timing, noise, power.libs files 
+
+## **SKY_130_D2_SK4 - General timing characterization parameters:**
+
+### **SK_L1 - Timing threshold definitions:**
+
+* The syntax is understood before, this is important to understand the GUNA software
+* Timing threshold definitions:
+  * Slew_low_rise_thr (threshold) : low means near the 0 level, defines the point towards the lower side of the power side, typically 20%
+slew_high_rise_thr
+slew_low_fall_thr
+slew_highfall_thr
+in_rise_thr: related to input waveforms
+in_fall_thr
+out_rise_thr: related to output : point at which delay can be calculated on the output waveform
+out_fall_thr
 
 
 
