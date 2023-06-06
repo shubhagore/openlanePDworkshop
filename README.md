@@ -729,7 +729,49 @@ _**magic -T sky130A.tech sky130_inv.mag &**_
     * Tech LEF - Technology LEF file contains information about the Metal layer, Via Definition and DRCs.
     * Macro LEF - Contains physical information of the cell such as its Size, Pin, their direction.      
        
-### **SK_L9 - Lab steps to createstd cell layout and extract spice netlist:**       
+### **SK_L9 - Lab steps to createstd cell layout and extract spice netlist:**  
+       
+![file_extraction](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/71ce59aa-98f9-4184-a88c-31e35f136ede)
+
+![file_extraction1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/8cae5bf4-7cec-41d5-a3d0-7bf9fb176961)
+
+![file_extraction2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/add34b6c-06d1-461f-bb1d-3edc63d31054)
+  
+![file_extraction3](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/c57546fb-e043-4d08-a6b2-78438363c0cb)
+ 
+![file_extraction4](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/2b0f3518-d8be-48a1-a048-576331c85423)
+    
+ ## **SKY_130_D2_SK3 - Sky130 Tech file Labs:**
+
+### **SK_L1 - Lab steps to create final SPICE deck using Sky130 tech:**
+       
+* The spice file looks as below before making changes,
+
+![spice_file](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/8e40a8ca-31c1-4a48-a78c-ad71a09cabc0)
+   
+* The spice file looks as below after making changes,
+       
+![spice_file1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/c2516121-395a-4868-99e5-b4568b0c88e4)
+
+* To run spice we have to use the command 
+  * **_ngspice <spice file name>_**
+       
+![spice_file2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/d15a387d-8a02-439f-9caa-79e8fc9ff0a4)
+     
+### **SK_L2 - Lab steps to characterize inverter using sky130 model file:**
+       
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
        
        
        
