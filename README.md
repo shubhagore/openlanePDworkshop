@@ -486,4 +486,27 @@ In my sythesis run the counts are as shown in the figure below,
 
 ### **SK_L4 - Need for libraries and characterization:**
 
-* 
+* Logical synthesis output is an arrangement of gates that describe the original functionality.
+* Floorplan: Here we import the netlist from the output of synthesis and decide the shape and size of core and die. This depends on the number of gates and shape and sizes of the gate present in the logical synthesis.
+* Placement: The logic cells are placed on the chip such that the initial timing is met.
+* Clock tree synthesis: Spreads clock evenly among all the logic cells.
+* Routing:
+* Static timing analysis (STA): To see the setup time, hold time , maximum available frequency. This is the signoff step
+* The one thing common across all these steps are the logic gates. This collection of gates is referred to as the library, these should be represented in a manner such that the EDA tool understands what the gates are.
+
+### **SK_L5 - Congestion aware placement using RePLAce:**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
