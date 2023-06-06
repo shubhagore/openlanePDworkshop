@@ -496,6 +496,34 @@ In my sythesis run the counts are as shown in the figure below,
 
 ### **SK_L5 - Congestion aware placement using RePLAce:**
 
+* Placement occurs in 2 stages: 
+  * Global: is basically **coarse placement** and there is no legalization (std cell are placed in the std cell rows, they should be abutted to each other, there shouldn't be any overlap) happening here. 
+  * Detailed: Legalization happens.
+* Objective of global placement is to **reduce wire length**, in openLANE, there is a concept of **HPWL** (half parameter wire length).
+* 
+
+## **SKY_130_D2_SK3 - Cell design and characterizaion flow:**
+
+### **SK_L1 - Inputs for cell design flow:**
+
+* In a typical IC design flow, the buffers, logic gates, etc. are called standard cells.
+* Standard cells are placed in a place known as **library**.
+* Library has got different gates with different functionalities.
+* It also has cells with different sizes, i.e different sized logic gates for example.
+* It also has cells with different threshold voltage. Variation in the threshold voltage decides the speed of the cell operation.
+
+![library_details](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/e131d0b2-64ab-46c0-9635-cdf9f81bd120)
+
+* Cell design flow is divided into following parts,
+  * **Inputs**:
+    * Process design kits (PDKs) given by the foundary, they include DRC & LVS rules, SPICE models, library and user-defined specs.
+    * basically a tech file with some rules
+    * say rules for poly width, minimum extension rules, etc.
+    * There are thousands of rules that are present and need to be followed.
+    * For the SPICE models, the threshold voltage equations are seen, they have some parameters called foundry parameters, also called SPICE model parameters 
+  * **Design steps**:
+  * **Outputs**: These are actual used by EDA tool
+
 
 
 
