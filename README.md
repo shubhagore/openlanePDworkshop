@@ -657,6 +657,14 @@ run_floorplan_**
   * ***** include tsmc_025um_model.mod *****
   * **.LIB "tsmc_025um_model.mod" CMOS_MODELS**
   * **.end**
+ 
+* All the tech parameters are located in the MODEL file
+* The model file contains all the information of NMOS and PMOS are stored
+* Here, W/L of both NMOS and PMOS = 1.5
+       
+### **SK_L4 - Switching Threshold Vm:**
+
+       
 
 
 
