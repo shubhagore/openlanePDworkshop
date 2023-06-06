@@ -646,17 +646,17 @@ run_floorplan_**
 
 * The SPICE netlist can be written as,
   * **M1 out in vdd vdd pmos W=0.375u L=0.25u** (<MOSFET name> <drain> <gate> <source> <substrate> <type of MOSFET> <width> <length>) 
-    **M2 out in 0 0 nmos W=0.375u L=0.25u**
-    **cload out 0 10f** (capacitance is in between out and 0)
-    **Vdd vdd 0 2.5**
-    **Vin in 0 2.5**
-    ***** Simulation commands *****
-    **.op**
-    **.dc Vin 0 2.5 0.05**
+  * **M2 out in 0 0 nmos W=0.375u L=0.25u**
+  * **cload out 0 10f** (capacitance is in between out and 0)
+  * **Vdd vdd 0 2.5**
+  * **Vin in 0 2.5**
+  * ***** Simulation commands *****
+  * **.op**
+  * **.dc Vin 0 2.5 0.05**
 
-   ***** include tsmc_025um_model.mod *****
-   **.LIB "tsmc_025um_model.mod" CMOS_MODELS**
-   **.end**
+  * ***** include tsmc_025um_model.mod *****
+  * **.LIB "tsmc_025um_model.mod" CMOS_MODELS**
+  * **.end**
 
 
 
