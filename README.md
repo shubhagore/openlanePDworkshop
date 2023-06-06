@@ -435,15 +435,20 @@ In my sythesis run the counts are as shown in the figure below,
 
 * To select the entire layout **press s** and then **press v** this will fit the layout to the center.
 * To **zoom the specific part of the layout first** **click on left of mouse and then right side of the mouse to form a box and then press z on the keyboard**.
-* To select a particular object bring the cursor on the object and then press s n the keyboard.
+* To select a particular object bring the cursor on the object and then press s n the keyboard. And to know what layer the object is present in type what on tkcon terminal.
 
 ![fp_layout1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/3cdde638-4474-4e48-8408-7ab92d2da68a)
 
 ![fp_layout2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/63285457-2b40-4899-b832-f23cf140bf32)
 
+![fp_layout3](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/ff35f3a5-0795-4fdc-9246-fe157036cf3b)
 
+* **Tap cells** are meant to **avoid the latch up** issue which occur in CMOS devices, which connect the **nwell to Vdd and substrate to ground**.  
+* Tapcells are placed diagonally equidistant.
+* Standard cells are present here in the lower left side.
 
+![fp_layout4](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/aec4fbf5-5c64-4d33-9424-ece0d0b6141b)
 
-
+![fp_layout5](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/834625f5-0d85-45a4-b7fa-4e7c8778f49c)
 
 
