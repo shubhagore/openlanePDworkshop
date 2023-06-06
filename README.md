@@ -592,13 +592,13 @@ Directory: results/placement/
 * The syntax is understood before, this is important to understand the GUNA software
 * Timing threshold definitions:
   * Slew_low_rise_thr (threshold) : low means near the 0 level, defines the point towards the lower side of the power side, typically 20%
-slew_high_rise_thr
-slew_low_fall_thr
-slew_highfall_thr
-in_rise_thr: related to input waveforms. 50%
-in_fall_thr: 50%
-out_rise_thr: related to output : point at which delay can be calculated on the output waveform 50%
-out_fall_thr: 50%
+  * slew_high_rise_thr
+  * slew_low_fall_thr
+  * slew_highfall_thr
+  * in_rise_thr: related to input waveforms. 50%
+  * in_fall_thr: 50%
+  * out_rise_thr: related to output : point at which delay can be calculated on the output waveform 50%
+  * out_fall_thr: 50%
 
 ### **SK_L2 - Propagation delay and transition time:**
 
@@ -670,9 +670,68 @@ run_floorplan_**
 
 ### **SK_L5 - Static and dynamic simulations of CMOS inverter:**
        
-*
+### **SK_L6 - Lab steps to git clone vsdstdcelldesign:**
 
+* We need to clone the git repo at first
+  * **git clone https://github.com/nickson-jose/vsdstdcelldesign.git**
 
+![git_clone](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/b83f7fc6-08c5-4ac3-a42e-6fe51ba4aa5f)
+       
+* We copy the tech file (/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech) into the folder here (/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/)
 
+![tech_file_copy](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/e5654370-0a41-4eb2-a837-2410e8e84b88)
 
+* For layout we run magic command
 
+_**magic -T sky130A.tech sky130_inv.mag &**_
+       
+![inverter_layout](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/32e508d6-381d-442b-bd46-9b6c692a84ec)
+
+## **SKY_130_D2_SK2 - Inception of layout and CMOS fabrication process:**
+
+### **SK_L1 - Create active regions:** 
+### **SK_L1 - Formation of n-well and p-well:**
+### **SK_L1 - Formation of gate terminal:**
+### **SK_L1 - Lightly doped drain (LDD) formation:**
+### **SK_L1 - Source and drain formation:**
+### **SK_L1 - Local interconnect formation:**
+### **SK_L1 - High level metal formation:**
+       
+* The steps are:
+  * Selecting a substrate: generally, P-type substrate
+  * Creating active region for transistors: Mask1
+    *  Isolation between active region pockets by depositing the oxide layer SiO2, silicon nitride Si3N4,then photoresist and masking the layers followed by photolithography and etch of the silicon nitride and remove photoresist. 
+    * Then this is placed in oxidation furnace, helps in growing oxide layer in other regions. This process is called **LOCOS "Local oxidation of silicon"** and lastly we strip out Si3N4 using hot phosphoric acid.
+  * The field oxide is grown, this process is called LOCOS ( Local Oxidation of silicon): Bird's beak
+  * N-well and P-well formation which will be used for PMOS and NMOS fabrication respectively
+  * Formation of gate
+  * Lightly doped drain (LDD) formation
+  * Source and drain formation
+  * Formation of contacts and interconnects
+  * Higher metal level formation       
+       
+### **SK_L8 - Lab instructions to sky130 basic layers layout and LEF using inverters:**      
+
+* The right side has all the layer information.       
+* Move the cursor across the poly-ndiff intersection so that will select only to that area  and press s, and type what on the tkcon window, this will tell the information
+* When the polysilicon crosses the n diffusion it is an nmos.
+       
+![nmos](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/f2736a07-8547-4a9b-9a5d-8f49179f07b0)
+       
+![pmos](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/3a77ad56-ed0a-4d20-83be-256d05ff3fa6)
+       
+* When s is pressed twice, the connected is also selected (in total thrice).
+
+![inverter_layout1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/ae0d85f5-f2c2-4d57-a4cf-a4fe1ab2c395)
+
+* **Library exchange format (.lef)**: The layout of a design is defined in a specific file called LEF.
+  * It includes design rules (tech LEF) and abstract information about the cells.
+    * Tech LEF - Technology LEF file contains information about the Metal layer, Via Definition and DRCs.
+    * Macro LEF - Contains physical information of the cell such as its Size, Pin, their direction.      
+       
+### **SK_L9 - Lab steps to createstd cell layout and extract spice netlist:**       
+       
+       
+       
+       
+       
