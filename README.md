@@ -451,4 +451,39 @@ In my sythesis run the counts are as shown in the figure below,
 
 ![fp_layout5](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/834625f5-0d85-45a4-b7fa-4e7c8778f49c)
 
+## **SKY_130_D2_SK2 - Library binding and placement:**
 
+### **SK_L1 - Netlist binding and initial place design:**
+
+* We have a particular netlist with some gates, the shape of these gates will represent the functionality of these gates.
+* In reality, we dont have shapes, we have boxes, it has physical dimensions.
+* A library is the place where we can find all the informations of each cell. Information includes timing information, size of the cell, width, height, delay, required condition of the cell, shapes of the cell, etc.
+* A **library** has various flavors of same cells in the library.
+* Till now we have 
+  * proper floorplan with input and output ports defined and placed
+  * Netlist
+  * Physical view of the logic gates. 
+* Physical view of the netlist and then place them.
+* The cells are placed near to its IO pins so that **delays are avoided**.
+
+### **SK_L2 - Optimize placement using estimated wire length and capacitance:**
+
+* The problems such as only some blocks being closer to their ports, can be solved, using a technique called **optimizing placement**.
+* For the last flip-flop, it becomes difficult due to restrictions.
+
+![pnr1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/ac89b230-78b6-47cd-b70a-50ca56ed0b86)
+
+* We will do some estimations, say flip-flop1 to din2, we try to estimate the capacitances in the wires that would be connected before routing.
+* Basically in optimize placement step the wire length, and capacitances are estimated, and based on that **repeaters** are inserted. This is done mainly to maintain **signal integrity**. 
+* **Repeaters** are **buffers that will recondition the original signal**. Repeaters will reproduce the original signal and send the new signal to the next stage.
+* Adding repeaters will create **loss of area**.
+* **Slew** is based on the value of the capacitor, the higher the capacitance, the higher is the amount of charge required to charge the capacitor,and slew will be bad.
+
+### **SK_L3 - Final placement optimization:**
+
+* The buffers are placed accordingly wherever required to maintain signal integrity.
+* Based on the setup timing analysis, the placement done is verified and checked.
+
+### **SK_L4 - Need for libraries and characterization:**
+
+* 
