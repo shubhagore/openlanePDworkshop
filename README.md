@@ -664,7 +664,13 @@ run_floorplan_**
        
 ### **SK_L4 - Switching Threshold Vm:**
 
+* The **Switching Threshold** of a CMOS inverter is the point where the Vin = Vout on the DC Transfer characreristics.     
+
+![spice_threshold](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/5794991d-f68a-42d5-87e4-e6644e8e2072)
+
+### **SK_L5 - Static and dynamic simulations of CMOS inverter:**
        
+*
 
 
 
