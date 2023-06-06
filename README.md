@@ -500,7 +500,25 @@ In my sythesis run the counts are as shown in the figure below,
   * Global: is basically **coarse placement** and there is no legalization (std cell are placed in the std cell rows, they should be abutted to each other, there shouldn't be any overlap) happening here. 
   * Detailed: Legalization happens.
 * Objective of global placement is to **reduce wire length**, in openLANE, there is a concept of **HPWL** (half parameter wire length).
-* 
+* The command used to run placement is
+**_run_placement_**
+
+![placement_log](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/a2f77149-45dd-4786-a9c0-cb15b01748bf)
+
+* Placement is where the **standard cell positions are fixed**, to visualize these changes, we go into
+
+Directory: results/placement/
+**magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &**
+
+![placement_magic_command](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/a841d54e-2863-43af-9ea3-829f8cc34476)
+
+![placement_layout](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/a13d4be2-e87b-4346-ac80-da83cc79ae6d)
+
+![placement_layout1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/0468c16b-22ff-45bf-93e0-03b8f4b489e5)
+
+* The power-ground network creates the power distribution network
+* But in OpenLANE, this does not happen during placement
+* A post floorplan and post placement CTS, we do power ground generation just before the routing.
 
 ## **SKY_130_D2_SK3 - Cell design and characterizaion flow:**
 
