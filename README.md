@@ -919,12 +919,22 @@ Again load the tech file, check drc and the issue will be solved.
        
 ![grid6](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/08e587f3-edd2-45ed-a11c-fc595b2fe011)
        
+#### **Creation of ports:**
        
+* The way to define a port is through Magic console and following are the steps:
+  * In Magic Layout window, first source the .mag file for the design (here inverter). Then Edit -> Text which opens up a dialogue box.
+  * When you double press S at the I/O lables, the text automatically takes the string name and size. Ensure the Port enable checkbox is checked and default checkbox is unchecked as shown in the figure:
+
+![port1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/12eed656-ee59-4e33-b566-c5801e8da40d)
+      
+![port2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/541c7202-8aa3-4b6b-8f31-322b8121782c)
        
+![port3](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/90f6c68f-27e4-4c26-b0a7-08bf4f0a5c5e)
        
+![port4](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/779a6ece-6aa5-4c85-87f1-6f5023f7f7eb)
        
-       
-       
+* In the above figures, The number in the textarea near enable checkbox defines the order in which the ports will be written in LEF file (0 being the first).
+
        
        
        
