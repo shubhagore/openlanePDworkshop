@@ -805,11 +805,13 @@ x0 = 4.07826e-09, y0 = 1.65017
        
 x0 = 4.05e-09, y0 = 1.65017
        
-Cell fall delay: 0.0282ns       
+Cell fall delay: 0.0282ns  
        
+![delay_coordinates](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/ef1bd817-aeaa-4806-a4ac-95c0ca6ab414)
        
+* Next objective is to use the layout and create a lef file, this will be used in openLANE and it is plugged into the picorv32 core.      
        
-       
+### **SK_L3 - Lab introduction to magic tool options and DRC rules:**       
        
        
        
