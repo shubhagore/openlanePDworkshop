@@ -872,8 +872,12 @@ Again load the tech file, check drc and the issue will be solved.
 
 ### **SKY_L1 - Lab steps to convert grid info to track info:**       
        
-       
-       
+* For place and route, the only information required is :
+  * Power and ground rail info
+  * PR boundary
+  * Input and output
+* LEF file has all this information       
+* Next objective is to extract this lef file from this mag file. This lef file can be inserted into the picorv32 core.       
        
        
        
