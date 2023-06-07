@@ -817,3 +817,37 @@ Cell fall delay: 0.0282ns
        
 ### **SK_L4 - Lab introduction to Sky130 pdk's and steps to download labs:**       
        
+![drc1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/6acbed6d-a1fe-484e-8464-11270400c78a)
+
+![drc2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/589edb87-939d-4f8d-94da-5e49b402cd42)
+  
+![drc3](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/aa34e99d-63ec-4120-aef6-5f6b8809ace5)
+       
+![drc4](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/a75e1070-b92f-4880-bd38-e70bc160bbb5)
+       
+### **SK_L5 - Lab introduction to magic and steps to load Sky130 tech-rules:**  
+       
+* For better graphics use command **magic -d XR**.
+* Consider the example of simple failing set of rules of metal 3 layer. Either run this by magic command line **magic -d XR metal3.mag** or from the magic console window, **menu - file - open -load - metal3.mag**
+       
+![metal3_magic](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/595661b4-e79a-435f-ab52-9e0079613e02)
+      
+       
+       
+### **SK_L6 - Lab excercise to fix poly.9 error in Sky130 tech-file:**       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
