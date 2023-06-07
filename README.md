@@ -760,14 +760,52 @@ _**magic -T sky130A.tech sky130_inv.mag &**_
      
 ### **SK_L2 - Lab steps to characterize inverter using sky130 model file:**
        
+![spice_command](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/986235f5-41ad-4fa0-89d7-c67fd8399f00)
 
+![inv_plot](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/24a5e7d1-c9f4-4317-9269-7d33a45eae5b)
+    
+* Characterizing a cell is done by obtaining 4 parameters:
+  * Rise tranisition: Time taken for output waveform to transit from a value of 20 percent of max value to 80 percent of max value (VDD)
+  * Fall transition: Time taken for output to fall from 80 percent to 20 percent
+  * Fall cell delay: time diff between the 50 of the output (difference in time(50% output fall) to time(50% input rise))
+  * Rise cell delay:  difference in time(50% output rise) to time(50% input fall)
        
+* **Rise transition:**
+    * Max value: 3.3V, 20 percent is 0.66
        
+      at 0.6 : x0 = 2.16162e-09, y0 = 0.5625
+
+      at 2.66: x0 = 2.2524e-09, y0 = 2.60008
+
+      Rise transition = x0 diff = 0.0908ns
        
+* **Fall transition:**
+
+* For fall tranistion, 80 percent to 20 percent
        
+at 2.66: x0 = 4.05475e-09, y0 = 2.63981
        
+at 0.6 : x0 = 4.09713e-09, y0 = 0.600042
        
+Fall tranisition: 0.0424ns       
+      
+* **Cell rise delay:**
+
+at 1.65:
+
+x0 = 2.21687e-09, y0 = 1.65007
+
+x0 = 2.14985e-09, y0 = 1.65007
        
+cell rise delay(propagation delay): 0.067ns
+       
+* **Cell fall delay:**       
+       
+x0 = 4.07826e-09, y0 = 1.65017
+       
+x0 = 4.05e-09, y0 = 1.65017
+       
+Cell fall delay: 0.0282ns       
        
        
        
