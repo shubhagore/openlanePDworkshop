@@ -813,7 +813,7 @@ Cell fall delay: 0.0282ns
        
 ### **SK_L3 - Lab introduction to magic tool options and DRC rules:**       
        
+* The website used id **www.opencircuitdesign.com/magic/**      
        
-       
-       
+### **SK_L4 - Lab introduction to Sky130 pdk's and steps to download labs:**       
        
