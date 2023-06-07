@@ -842,11 +842,31 @@ From metal 3.4 drc rules, Via2 must be enclosed by metal3 by atleast 0.065u. Mag
 
 ![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/87bb3d8a-debd-40cf-b2a0-cc3bd2e7e62c)
        
-### **SK_L8 - Lab challenge excercise to describe DRC error as geometrical construct:**       
+### **SK_L8 - Lab challenge excercise to describe DRC error as geometrical construct:**   
+       
+### **SK_L9 - Lab challenge to find missing or incorrect rules and fix them:**
        
 First load the poly file by load poly.mag on tkcon window. Finding the error by mouse cursor and find the box area, Poly.9 is violated due to spacing between polyres and poly.
        
-### **SK_L9 - Lab challenge to find missing or incorrect rules and fix them:**       
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/98a7b76f-e16f-45eb-a00f-02ac2082f7ef)
+
+View the tech file and search whether we have created any drc rule for poly.9. If there is none, create a rule defining spacing between polyres and poly. This is how we add spacing for all the polyres
+       
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/a963fbfc-60a5-4979-9e2e-1260ebf4d966)
+
+Once the tech file has been modified for drc, we load the tech file in tkcon window and tool doesnot check drc automatically so we need to check drc too. Once loaded, the violations are reduced since spacing rule is met.
+
+**tech load sky130A.tech followed by drc check**
+       
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/33f7f078-7bbb-4bbe-ab67-02e4b5b809de)
+
+Now, poly.9 is spacing between polyres to poly and poly to diff/tap. Once we resolve the polyres to poly, poly to tap / diff got violated. So we provide spacing for tap/diff. in tech,
+       
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/b635bda8-11c5-4401-9097-69203fe87330)
+
+Again load the tech file, check drc and the issue will be solved.       
+       
+       
        
        
        
