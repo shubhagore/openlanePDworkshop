@@ -831,16 +831,22 @@ Cell fall delay: 0.0282ns
 * Consider the example of simple failing set of rules of metal 3 layer. Either run this by magic command line **magic -d XR metal3.mag** or from the magic console window, **menu - file - open -load - metal3.mag**
        
 ![metal3_magic](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/595661b4-e79a-435f-ab52-9e0079613e02)
-      
-       
-       
+           
 ### **SK_L6 - Lab excercise to fix poly.9 error in Sky130 tech-file:**       
        
+### **SK_L7 - Lab excercise to implement poly resistor spacing to diff and tap:**   
        
+We have few drc errors and calls out a rule number. You can see these rules on google skywater pdk read the doc page.
+
+From metal 3.4 drc rules, Via2 must be enclosed by metal3 by atleast 0.065u. Magic tablet is of using many derived layers and in which via is one. Via represents the area filled with contact cuts. Draw a large area of M3 contatc using mouse pointer hovering over the m3contact icon on the side toolbar. Now with cursor box around the m3 area, type command cif see VIA2. This create contatc cuts which are bloack sqaure shaped. These dont exist on the drawn layout, but they represent as mask layer VIA2, that will end up in the GDS Futher details about these are metioned in cif output section in tech file. The view we see is feedback entry and can dismiss it with feed clear We use snap internal command snap int for the cursor to move along the edge of the grid. There are few spacing rukes metioned like spacing between Via2 and metal 3 is 0.065u. If we put the curosor between the contact cut and drawn via edge and click box in tkcon command, we will get the distance. The tool automatically places and do spacing of the contact, there wont be any DRC errors and the distance will not be smaller than the specified one.
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/87bb3d8a-debd-40cf-b2a0-cc3bd2e7e62c)
        
+### **SK_L8 - Lab challenge excercise to describe DRC error as geometrical construct:**       
        
+First load the poly file by load poly.mag on tkcon window. Finding the error by mouse cursor and find the box area, Poly.9 is violated due to spacing between polyres and poly.
        
-       
+### **SK_L9 - Lab challenge to find missing or incorrect rules and fix them:**       
        
        
        
