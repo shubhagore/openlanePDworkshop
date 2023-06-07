@@ -878,6 +878,96 @@ Again load the tech file, check drc and the issue will be solved.
   * Input and output
 * LEF file has all this information       
 * Next objective is to extract this lef file from this mag file. This lef file can be inserted into the picorv32 core.       
+* From PnR point of vew few of the gudelines to be followed, is that
+  * Input and output ports must lie on the intersection of the horizontal and vertical tracks
+  * Width of the standard cell should be a odd multiple of track pitch and height should be an odd multiple of the track vertical pitch
+* To know the accuracy of the layout what we have
+* Track info can be seen in this directory: 
+  * **/home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/track.info**
+
+![track_info](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/fa9ff699-d573-469a-b99f-0a49b3166ce1)
+
+* **Tracks** are nothing but these areused during the **routing stage**.       
+       
+![grid1](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/db775f79-b153-4fea-8bc0-debf1a9617ee)
+        
+* In the above figure the black sqare at the edge of the inner sqare represents that the **grid is activated**. Grid can be **activated** by **pressing g** and **deavtivated** by again **pressing g. **       
+* **Routes** are **metal traces** basically.  
+       
+![grid2](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/9f3fd7ab-2de2-4c36-9579-c03cc747fcbb)       
+       
+* Ports are in li1 metal layer, we need to make sure that this is present in the intersection
+* From the tracks.info file, in the tkcon window,
+  * **grid 0.46um 0.34um 0.23um 0.17um**
+* This is basically converting the grid def to track definition, routing of li1 layer can only happen along this layer, now we need to check if io ports are at the intersection of the tracks, this ensures that the route can reach the port from the y as well as the x direction
+
+![grid3](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/466f72dd-f459-4e35-94bd-1b6b664215fc)
+   
+![grid4](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/827e7e2b-6e7b-4d9b-8c15-4a44951dec8d)
+       
+* Port 'A' and 'Y' are intersecting with the hotizontal track.       
+       
+### **SKY_L2 - Lab steps to convert magic layout to std cell lef:**        
+       
+* **Width of the std cell** should be in the **odd multiples of x pitch**.
+* In the figure shown below the number of squares involved is 3, thus width of the std cell should be the multiple of 3.
+* In the figure below the area within the while colored rectangle is the actual PnR area, so considering that area 3 squares are considered.
+       
+ ![grid5](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/a5074f9e-d61d-4f11-807f-d62f993a9239)
+
+* Similarly the height of the std cell also need to be calculated and it is 8       
+       
+![grid6](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/08e587f3-edd2-45ed-a11c-fc595b2fe011)
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
        
        
        
