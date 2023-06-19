@@ -957,26 +957,144 @@ Again load the tech file, check drc and the issue will be solved.
        
 ![port4](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/779a6ece-6aa5-4c85-87f1-6f5023f7f7eb)
        
-* In the above figures, The number in the textarea near enable checkbox defines the order in which the ports will be written in LEF file (0 being the first).
+* In the above figures, The number in the text area near enable checkbox defines the order in which the ports will be written in LEF file (0 being the first).
 
+After defining ports, the next step is setting port class and port use attributes.
+
+Select port A in magic:
+
+port class input
+
+port use signal
+
+Select Y area
+
+port class output
+
+port class signal
+
+Select VPWR area
+
+port class inout
+
+port use power
+
+Select VGND area
+
+port class inout
+
+port use ground
+
+#### **Custom cell naming and lef extraction:**
+Name the custom cell through tkcon window as sky130_vsdinv.mag.
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/97d2a8cb-7476-46df-9c58-2eedc8379b1a)
+
+this gets created in openlane/vsdstdcelldesign directory.
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/b46ee4f2-561b-4514-a025-1ea671bb2429)
+
+LEF extraction can be carried out in tkcon as follows:
+
+**_lef write_**
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/92b1c23c-67db-4db8-b052-159722af76b5)
+
+This generates sky130_vsdinv.lef file.
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/e4c47605-4ae2-47dc-b015-e509acf36c7e)
+
+#### **Integrating custom cell in OpenLANE:**
+
+In order to include our custom standard cell to your design and run the first step synthesis, copy the sky130_vsdinv.lef file to the designs/picorv32a/src directory. Since abc maps the standard cell to a library, there must be a library that defines the CMOS inverter. The sky130_fd_sc_hd_typical.lib as well as fast and slow libs files from vsdstdcelldesign/libs directory needs to be copied to the designs/picorv32a/src directory. If you are interested to check our cell in lib and lef, go to lib and lef folders
        
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/1399ef50-9cbe-4514-b1bc-8c0b53755ba9)
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/71ed865f-2b2c-4a9c-975f-31861bf06d88)
+
+Next step is to modifiy the config.tcl by adding few extra definitions like abc synthesis mapping to typical.lib, other three are used for sta analysis and to include extra lefs(our design lef) to flow
+
+set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130/sky130_fd_sc_hd__typical.lib"
+set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130/sky130_fd_sc_hd__slow.lib"
+set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130/sky130_fd_sc_hd__fast.lib"
+set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130/sky130_fd_sc_hd__typical.lib"
+set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]  
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/5e517752-4f97-44d5-8965-c9bddb404359)
+
+Before this, lets change the env variable strategy for synth in configuration/synthesis.tcl from AREA 0 to DELAY
+
+In order to integrate the standard cell in the OpenLANE flow, invoke openLANE as usual and carry out following steps:
+
+**_prep -design picorv32a -tag 03-06-08-35 -overwrite 
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+run_synthesis_**
+
+After synthesis, my timing is clean.
+
+#### **Delay Tables:**
        
+Basically, Delay is a parameter that has huge impact on our cells in the design. Delay decides each and every other factor in timing. For a cell with different size, threshold voltages, delay model table is created where we can use it as timing table. **Delay of a cell depends on input transition and out load**. Lets say two scenarios, we have long wire and the cell(X1) is sitting at the end of the wire : the delay of this cell will be different because of the bad transition that caused due to the resistance and capcitances on the long wire. we have the same cell sitting at the end of the short wire: the delay of this will be different since the tarnsition is not that bad comapred to the earlier scenario. Eventhough both are same cells, depending upon the input transition, the delay got chaned. Same goes with o/p load also.    
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/32066034-fc9f-401e-94ef-3eea54626101)
+
+Just for better values for slack, I checked few synthesis environment variables like synthesis strategy, synthesis buffering and synthesis sizing , maximum fanout of cells and made changes if neccessary.      
        
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/8fdc5415-0ab4-4c68-9a60-f300ed38446b)
+
+run synthesis if you have violations for better slack
+
+Next floorplan is run, followed by placement:
+
+**_run_floorplan_**
+
+Since we are getting an error shown in the below,       
        
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/9ad3d2d8-099d-430a-97d8-07a02a609c14)
+
+we gave commands for each stage manually step by step after synthesis.
+
+**_init_floorplan
+place_io
+global_placement_or
+tap_decap_or_**
+
+During floorplan, **_tap cells - 7892_**, **_Endcap cells - 550_** got placed. Design has **_275 original rows_**.
+
+Now Instead of **_run_placement_**, we get **_detailed_placement_**
+
+After **_placement_**, we check for **_legality_**. I even check how many cells got placed.
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/7fa4405e-4b67-4613-b0c2-4c0d23c30f75)
+
+To check the layout invoke magic from the results/placement directory:
+
+**_magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &_**
+
+Since the custom standard cell has been plugged into the design,in the openlane flow, it would be visible in the layout.
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/a25844ee-e3dd-4fb2-9767-43fc946045e1)
+
+#### Post-synthesis timing analysis Using OpenSTA:**
        
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
+Timing analysis is carried out outside the openLANE flow using OpenSTA tool. For this, pre_sta.conf is required to carry out the STA analysis. Invoke OpenSTA outside the openLANE flow as follows:
+
+**_sta pre_sta.conf_**
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/f368c752-e653-4678-a84f-75e71ff6ab05)
+
+sdc file for OpenSTA is modified like this:
+
+base.sdc is located in vsdstdcelldesigns/extras directory. So, I copied it into our design folder using
+
+**_cp my_base.sdc /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/_**
+
+![image](https://github.com/shubhagore/openlanePDworkshop/assets/135098553/a9073ed3-265b-4032-b472-d0a2b3c3e512)
+
+Since there are no Violations I skipped this, but have hands on experience on timing analysis using OpenSTA.
+
+Since clock is propagated only once we do CTS, In placement stage, clock is considered to be ideal. So only setup slack is taken into consideration before CTS.
        
        
        
